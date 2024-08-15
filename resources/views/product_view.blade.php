@@ -7,6 +7,7 @@
 @endsection
 
 @section('content')
+
 <div class="product-view">
 <img src="{{ asset('products/'.$product->image) }}" alt="{{ $product->title }}">
     <h2>{{ $product->title }}</h2>

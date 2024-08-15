@@ -12,7 +12,7 @@ use App\Http\Controllers\AdminProductController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.view');
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
 Route::post('/product/store', [ProductController::class, 'store'])->name('product.store');
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
