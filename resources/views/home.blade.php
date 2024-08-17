@@ -8,16 +8,15 @@
 
 @section('content')
 
-<!-- Welcome Section -->
 <div class="welcome-section">
-    <h1>Welcome to Laravel E-Commerce</h1>
-    <p>Your one-stop shop for the best products</p>
-    <a href="{{ url('/shop') }}" class="btn">Shop Now</a>
+    <img src="{{ asset('image/banner.svg') }}" alt="Banner" class="banner-image">
+   
 </div>
+
 
 <!-- Featured Products Section -->
 <div class="featured-products">
-    <h2>Featured Products</h2>
+    <!-- <h2 >Featured Products</h2> -->
     <div class="product-grid">
         @foreach($products as $product)
         <div class="product-card">
@@ -25,9 +24,11 @@
             <h3>{{ $product->title }}</h3>
             <p>{{ $product->description }}</p>
             <p class="price">${{ $product->price }}</p>
-            <a href="{{ route('product.show', $product->id) }}" class="btn">View Product</a>
-        </div>
+            <a href="{{ route('admin.products.show', $product->id) }}" class="btn">View Product</a>
+            </div>
         @endforeach
     </div>
 </div>
+@include('team')
+
 @endsection

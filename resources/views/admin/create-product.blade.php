@@ -17,7 +17,7 @@
     @endif
 
     <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf
+    @csrf
         <div class="form-group">
             <label for="title">Product Title</label>
             <input type="text" id="title" name="title" class="form-control" value="{{ old('title') }}" required>
